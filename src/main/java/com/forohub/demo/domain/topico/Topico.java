@@ -1,7 +1,6 @@
 package com.forohub.demo.domain.topico;
 
 import com.forohub.demo.domain.curso.Curso;
-import com.forohub.demo.domain.curso.CursoTopicosDTO;
 import com.forohub.demo.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -39,7 +38,22 @@ public class Topico {
         this.titulo = titulo;
         this.mensaje = mensaje;
         this.fechaCreacion = LocalDateTime.now();
+        this.status = false;
         this.autorTopico = autor;
         this.curso = curso;
     }
+
+
+    public void actualizarTopico(ActualizarTopicoDTO datos) {
+        if (datos.mensaje() != null) {
+            this.mensaje = datos.mensaje();
+        }
+        if (datos.titulo() != null) {
+            this.titulo = datos.titulo();
+        }
+    }
+    public void setStatus() {
+        this.status = !status;
+        }
+
 }
