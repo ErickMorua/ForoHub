@@ -5,6 +5,7 @@ import com.forohub.demo.domain.topico.respuesta.CrearRespuestaDTO;
 import com.forohub.demo.domain.topico.respuesta.EditarRespuestaDTO;
 import com.forohub.demo.domain.topico.respuesta.RespuestaRepository;
 import com.forohub.demo.domain.topico.respuesta.RespuestaService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/respuestas")
-//@SecurityRequirement(name = "bearer-key")
+@SecurityRequirement(name = "bearer-key")
 
 public class RespuestaController {
 

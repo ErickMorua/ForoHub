@@ -5,6 +5,7 @@ import com.forohub.demo.domain.topico.CrearTopicoDTO;
 import com.forohub.demo.domain.topico.TopicoDTO;
 import com.forohub.demo.domain.topico.TopicoService;
 import com.forohub.demo.domain.topico.respuesta.EditarRespuestaDTO;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @ResponseBody
-//@SecurityRequirement(name = "bearer-key")
+@SecurityRequirement(name = "bearer-key")
 @RequestMapping("/topicos")
 
 public class TopicoController {
