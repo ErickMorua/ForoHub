@@ -2,6 +2,7 @@ package com.forohub.demo.domain.topico.validaciones;
 
 import com.forohub.demo.domain.curso.CursoRepository;
 import com.forohub.demo.domain.topico.CrearTopicoDTO;
+import com.forohub.demo.infra.errores.ValidacionDeIntegridad;
 import jakarta.validation.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 
