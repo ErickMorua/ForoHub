@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class UsuarioExistente implements ValidarTopico {
 
+
     @Autowired
     private UsuarioRpository usuarioRpository;
 
