@@ -29,7 +29,7 @@ public class RespuestaValida implements ValidarRespuesta {
                 topicoRepository.getReferenceById(datos.idTopico()),
                 datos.mensaje(),
                 usuarioRepository.getReferenceById(datos.idAutor()))) {
-            throw new ValidationException("Ya existe una respuesta en el topico")
+            throw new ValidationException("Ya existe una respuesta en el topico");
         }
     }
 }
