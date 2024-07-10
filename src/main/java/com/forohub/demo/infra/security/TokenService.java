@@ -28,7 +28,7 @@ public class TokenService {
                     .withClaim("id", usuario.getId())
                     .withExpiresAt(generarFechaExpiracion())
                     .sign(algorithm);
-        } catch (JWTCreationException e) {
+        } catch (JWTCreationException exception){
             throw new RuntimeException();
         }
     }
